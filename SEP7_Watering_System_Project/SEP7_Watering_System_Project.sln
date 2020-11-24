@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEP7_Watering_System_Project", "SEP7_Watering_System_Project\SEP7_Watering_System_Project.csproj", "{C87CDFA7-78BF-4965-832E-E25DA4DC9DBE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C87CDFA7-78BF-4965-832E-E25DA4DC9DBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C87CDFA7-78BF-4965-832E-E25DA4DC9DBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C87CDFA7-78BF-4965-832E-E25DA4DC9DBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C87CDFA7-78BF-4965-832E-E25DA4DC9DBE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4157E09A-8BB4-48D7-A589-9CAECE54401F}
+	EndGlobalSection
+EndGlobal
