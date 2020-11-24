@@ -22,6 +22,20 @@ namespace ReadDataTest
                         string s = port.ReadLine();
                         Console.WriteLine(s);
                         System.Threading.Thread.Sleep(500);
+
+
+                        string[] data = s.Split(',');
+                       
+                        double b, d, e;
+                        
+                       double.TryParse(data[0], out b);
+                       double.TryParse(data[1], out d);
+                       double.TryParse(data[1], out e);
+
+
+                        Console.WriteLine("b = " + b);
+                        Console.WriteLine("d = " + d);
+                        Console.WriteLine("e = " + e);
                     }
                 }
                 catch (Exception ex)
