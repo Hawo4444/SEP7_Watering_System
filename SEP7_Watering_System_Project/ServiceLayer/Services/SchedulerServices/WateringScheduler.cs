@@ -16,10 +16,10 @@ namespace ServiceLayer.Services.SchedulerServices
 
         private static Timer wateringTimer;
 
-        // Find source, adjust
+        // Should be adjusted according to the type of plants used
         private const int daysPlantsCanSurviveWithoutWater = 20;
-        // Find source, adjust // When amount of water in soil is under the threshold, start counting days without water
-        private const double soilMoistureThreshold = 100;
+        // When amount of water in soil is under the threshold, start counting days without water
+        private const double soilMoistureThreshold = 450;
         // Number of days currently forecasted, used for determining whether the system should water (if there is no rain in those days) 
         private const int numberOfDaysForecasted = 5;
         // Keeps track of how much rain there should be durin the forecasted period
@@ -91,7 +91,7 @@ namespace ServiceLayer.Services.SchedulerServices
             else
             {
                 // Figure out whether it rains within the next 5 days
-                if (amountOfRainWithinForecastedPeriod > 0) // Could be changed to a certain threshold for rain
+                if (amountOfRainWithinForecastedPeriod > 1) // Could be changed to a certain threshold for rain
                 {
                     isCloseToMaxSurvival = true;
                 }
@@ -109,7 +109,7 @@ namespace ServiceLayer.Services.SchedulerServices
             for (int i = 0; i < numberOfDaysForecasted; i++)
             {
                 // Probability of rain * amount of rain for each day to account for the probability
-                amountOfRainWithinForecastedPeriod += (forecastDataModel.Daily[i].Rain * forecastDataModel.Daily[i].Pop);
+                amountOfRainWithinForecastedPeriod += (forecastDataModel.Daily[i].Rain * (forecastDataModel.Daily[i].Pop / 100));
             }
         }
 
