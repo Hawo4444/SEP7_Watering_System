@@ -50,7 +50,7 @@ namespace ServiceLayer.Services.SchedulerServices
 
         private void SetTimer(int time)
         {
-            if (!wateringTimer.Enabled)
+            if (wateringTimer == null)
             {
                 // Create a timer with an interval
                 wateringTimer = new Timer(time); // Days to seconds
@@ -63,7 +63,7 @@ namespace ServiceLayer.Services.SchedulerServices
 
         public void StopTimer()
         {
-            if (wateringTimer.Enabled)
+            if (!(wateringTimer == null))
             {
                 wateringTimer.Enabled = false;
                 wateringTimer.Stop();

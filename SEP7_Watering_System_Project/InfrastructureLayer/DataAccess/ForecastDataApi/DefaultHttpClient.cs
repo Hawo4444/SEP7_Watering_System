@@ -13,8 +13,8 @@ namespace InfrastructureLayer.DataAccess.ForecastDataApi
     {
         const string APPID = "926afdf6c90fe578c9af5b62eb2b43e7";
         private string Units = "metric";
-        private double Latitude = 55.86066;
-        private double Longitude = 9.85034;
+        private double Latitude = 41.902782; // Latiude for the city of Rome
+        private double Longitude = 12.496366; // Longitude for the city of Rome
 
         HttpClient HttpClient;
 

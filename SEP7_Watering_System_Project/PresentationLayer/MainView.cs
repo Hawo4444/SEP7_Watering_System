@@ -77,7 +77,7 @@ namespace PresentationLayer
         private void materialFlatButton1_MouseClick(object sender, MouseEventArgs e)
         {
             this.Enabled = false;
-            new SensorDataListFrom().Show(this);
+            new SensorDataListForm().Show(this);
         }
     }
 }

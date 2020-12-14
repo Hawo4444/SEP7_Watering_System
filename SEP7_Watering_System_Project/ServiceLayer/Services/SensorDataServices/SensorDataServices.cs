@@ -27,13 +27,13 @@ namespace ServiceLayer.Services.SensorDataServices
             _arduinoAccess = arduinoAccess;
             _mainPresenter = mainPresenter;
             _wateringScheduler = wateringScheduler;
-            //GetAndInsertData(); // Uncomment!!!
-            //SetTimer();
+            GetAndInsertSensorData(); // Uncomment!!!
+            SetTimer();
         }
 
         private void SetTimer()
         {
-            if(!arduinoTimer.Enabled)
+            if(arduinoTimer== null)
             {
                 // Create a timer with an interval.
                 arduinoTimer = new Timer(arduinoRequestFrequency);
@@ -74,7 +74,7 @@ namespace ServiceLayer.Services.SensorDataServices
 
         public void StopTimer()
         {
-            if(arduinoTimer.Enabled)
+            if(!(arduinoTimer == null))
             {
                 arduinoTimer.Enabled = false;
                 arduinoTimer.Stop();

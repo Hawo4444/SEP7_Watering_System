@@ -32,7 +32,7 @@ namespace ServiceLayer.Services.ForecastDataServices
 
         private void SetTimer()
         {
-            if(!apiTimer.Enabled)
+            if(apiTimer == null)
             {
                 // Create a timer with an interval.
                 apiTimer = new Timer(apiRequestFrequency); 
@@ -57,7 +57,7 @@ namespace ServiceLayer.Services.ForecastDataServices
 
         public void StopTimer()
         {
-            if (apiTimer.Enabled)
+            if (!(apiTimer == null))
             {
                 apiTimer.Enabled = false;
                 apiTimer.Stop();

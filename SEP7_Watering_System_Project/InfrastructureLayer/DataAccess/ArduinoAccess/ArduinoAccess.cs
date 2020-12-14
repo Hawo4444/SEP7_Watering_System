@@ -19,7 +19,7 @@ namespace InfrastructureLayer.DataAccess.ArduinoAccess
             port = new SerialPort();
             port.BaudRate = 9600;
             port.PortName = "COM1";
-            //port.Open();
+            port.Open();
         }
 
         public SensorDataModel GetSensorData()
@@ -33,7 +33,7 @@ namespace InfrastructureLayer.DataAccess.ArduinoAccess
 
             double.TryParse(data[0], out humidity);
             double.TryParse(data[1], out moisture);
-            double.TryParse(data[1], out temperature);
+            double.TryParse(data[2], out temperature);
 
             DateTime timeNow = DateTime.UtcNow;
             SensorDataModel _sensorData = new SensorDataModel

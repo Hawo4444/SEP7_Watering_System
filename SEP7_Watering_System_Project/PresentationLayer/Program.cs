@@ -2,7 +2,6 @@
 using InfrastructureLayer.DataAccess.ArduinoAccess;
 using InfrastructureLayer.DataAccess.ForecastDataApi;
 using PresentationLayer.Presenters;
-using PresentationLayer.Views;
 using ServiceLayer.Services.ForecastDataServices;
 using ServiceLayer.Services.SensorDataServices;
 using System;
