@@ -12,7 +12,7 @@ namespace ServiceLayer.Services.SchedulerServices
 {
     public class WateringScheduler : IWateringScheduler
     {
-        private IArduinoAccess _arduinoAccess;
+        private IArduinoAccessScheduler _arduinoAccess;
 
         private static Timer wateringTimer;
 
@@ -29,6 +29,11 @@ namespace ServiceLayer.Services.SchedulerServices
         private bool isCloseToMaxSurvival = false;
         // Last recorded soil moisture
         private double lastRecorderSoilMoisture;
+
+        public WateringScheduler(IArduinoAccessScheduler arduinoAccess)
+        {
+            _arduinoAccess = arduinoAccess;
+        }
 
         // Checks whether the plants are close to daysPlantsCanSurviveWithoutWater
         private void AdjustTimer()
@@ -79,7 +84,7 @@ namespace ServiceLayer.Services.SchedulerServices
                 // Last recorded moisture was lower than the threshold -> water plants
                 if(lastRecorderSoilMoisture < soilMoistureThreshold)
                 {
-                    WaterPlants();    
+                    Water();    
                 }   
                 isCloseToMaxSurvival = false;
             } 
@@ -92,14 +97,9 @@ namespace ServiceLayer.Services.SchedulerServices
                 }
                 else
                 {
-                    WaterPlants();
+                    Water();
                 }
             }
-        }
-
-        public WateringScheduler(IArduinoAccess arduinoAccess)
-        {
-            _arduinoAccess = arduinoAccess;
         }
 
         public void UpdateForecastDataInScheduler(IForecastDataModel forecastDataModel)
@@ -127,9 +127,9 @@ namespace ServiceLayer.Services.SchedulerServices
             }
         }
 
-        public void WaterPlants()
+        public void Water()
         {
-            //_arduinoAccess. ;
+            _arduinoAccess.Water();
         }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace ServiceLayer.Services.SensorDataServices
 {
-    public interface IArduinoAccess
+    public interface IArduinoAccessSensors
     {
         SensorDataModel GetSensorData();
     }

@@ -10,20 +10,24 @@ using ServiceLayer.Services.SensorDataServices;
 
 namespace InfrastructureLayer.DataAccess.ArduinoAccess
 {
-    public class ArduinoAccess : IArduinoAccess
+    public class ArduinoAccess : IArduinoAccessSensors, IArduinoAccess
     {
         private SerialPort port;
+
+        private const string WATERING = "Water";
+        private const string GETDATA = "GetData";
 
         public ArduinoAccess()
         {
             port = new SerialPort();
             port.BaudRate = 9600;
-            port.PortName = "COM3";
+            port.PortName = "COM1";
             port.Open();
         }
 
         public SensorDataModel GetSensorData()
         {
+            port.WriteLine(GETDATA);
             string s = port.ReadLine();
             Console.WriteLine(s);
 
@@ -45,6 +49,11 @@ namespace InfrastructureLayer.DataAccess.ArduinoAccess
             };
 
             return _sensorData;
+        }
+
+        public void Water()
+        {
+            port.WriteLine(WATERING);
         }
     }
 }

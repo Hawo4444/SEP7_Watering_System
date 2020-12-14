@@ -56,11 +56,12 @@
     <Compile Include="Services\ForecastDataServices\IForecastDataServices.cs" />
     <Compile Include="Services\ForecastDataServices\IHttpClient.cs" />
     <Compile Include="Services\ForecastDataServices\IMainPresenter.cs" />
+    <Compile Include="Services\SchedulerServices\IArduinoAccessScheduler.cs" />
     <Compile Include="Services\SchedulerServices\IWateringScheduler.cs" />
     <Compile Include="Services\SchedulerServices\IWateringSchedulerForecast.cs" />
     <Compile Include="Services\SchedulerServices\IWateringSchedulerSensors.cs" />
     <Compile Include="Services\SchedulerServices\WateringScheduler.cs" />
-    <Compile Include="Services\SensorDataServices\IArduinoAccess.cs" />
+    <Compile Include="Services\SensorDataServices\IArduinoAccessSensors.cs" />
     <Compile Include="Services\SensorDataServices\SensorDataServices.cs" />
     <Compile Include="Services\SensorDataServices\ISensorDataServices.cs" />
     <Compile Include="Services\SensorDataServices\ISensorDataRepository.cs" />

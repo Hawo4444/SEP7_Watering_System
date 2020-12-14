@@ -10,17 +10,17 @@ using System.Timers;
 
 namespace ServiceLayer.Services.SensorDataServices
 {
-    public class SensorDataServices : ISensorDataServices, ISensorDataRepository, IArduinoAccess, IWateringSchedulerSensors
+    public class SensorDataServices : ISensorDataServices, ISensorDataRepository, IArduinoAccessSensors, IWateringSchedulerSensors
     {
         private ISensorDataRepository _sensorDataRepository;
-        private IArduinoAccess _arduinoAccess;
+        private IArduinoAccessSensors _arduinoAccess;
         private IMainPresenter _mainPresenter;
         private IWateringSchedulerSensors _wateringScheduler;
 
         private static Timer arduinoTimer;
         private const int arduinoRequestFrequency = 5000; // To be changed
 
-        public SensorDataServices(ISensorDataRepository sensorDataRepository, IArduinoAccess arduinoAccess,
+        public SensorDataServices(ISensorDataRepository sensorDataRepository, IArduinoAccessSensors arduinoAccess,
             IMainPresenter mainPresenter, IWateringScheduler wateringScheduler)
         {
             _sensorDataRepository = sensorDataRepository;
@@ -48,10 +48,6 @@ namespace ServiceLayer.Services.SensorDataServices
         {
             GetAndInsertSensorData();
             _wateringScheduler.UpdateSensorDataInScheduler(GetSensorData());
-            for (int i = 0; i < ((List<SensorDataModel>)RetrieveAllData()).Count; i++)
-            {
-                Console.WriteLine(((List<SensorDataModel>)RetrieveAllData())[i].TimeStamp);
-            }
         }
 
         public void GetAndInsertSensorData()
@@ -88,7 +84,7 @@ namespace ServiceLayer.Services.SensorDataServices
 
         public void UpdateSensorDataInScheduler(ISensorDataModel sensorDataModel)
         {
-            throw new NotImplementedException();
+            _wateringScheduler.UpdateSensorDataInScheduler(sensorDataModel);
         }
     }
 }

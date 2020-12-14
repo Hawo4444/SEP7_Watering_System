@@ -51,7 +51,6 @@ namespace PresentationLayer
                 day.Temp.Day + "°C\r\n\r\n" +
                 day.Humidity + "%\r\n\r\n" +
                 day.Rain + " mm";
-
         }
 
         private void WriteTextSafe(string text, dynamic control) 
@@ -78,6 +77,11 @@ namespace PresentationLayer
         {
             this.Enabled = false;
             new SensorDataListForm().Show(this);
+        }
+
+        private void waterPlantsManually(object sender, EventArgs e)
+        {
+
         }
     }
 }

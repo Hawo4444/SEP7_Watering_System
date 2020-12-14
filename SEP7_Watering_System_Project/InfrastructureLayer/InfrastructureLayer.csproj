@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccess\ArduinoAccess\ArduinoAccess.cs" />
+    <Compile Include="DataAccess\ArduinoAccess\IArduinoAccess.cs" />
     <Compile Include="DataAccess\EntityFramework\SensorData\SensorDataRepository.cs" />
     <Compile Include="DataAccess\EntityFramework\SensorData\SensorDataDB.cs" />
     <Compile Include="DataAccess\ForecastDataApi\DefaultHttpClient.cs" />
