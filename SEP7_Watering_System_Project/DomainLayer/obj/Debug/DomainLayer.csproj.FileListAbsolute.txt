@@ -1,0 +1,12 @@
+C:\Users\Uzivatel\Desktop\Files\School\DK\sem7\SEP\SEP7_Watering_System\SEP7_Watering_System_Project\DomainLayer\bin\Debug\DomainLayer.dll.config
+C:\Users\Uzivatel\Desktop\Files\School\DK\sem7\SEP\SEP7_Watering_System\SEP7_Watering_System_Project\DomainLayer\bin\Debug\DomainLayer.dll
+C:\Users\Uzivatel\Desktop\Files\School\DK\sem7\SEP\SEP7_Watering_System\SEP7_Watering_System_Project\DomainLayer\bin\Debug\DomainLayer.pdb
+C:\Users\Uzivatel\Desktop\Files\School\DK\sem7\SEP\SEP7_Watering_System\SEP7_Watering_System_Project\DomainLayer\bin\Debug\EntityFramework.dll
+C:\Users\Uzivatel\Desktop\Files\School\DK\sem7\SEP\SEP7_Watering_System\SEP7_Watering_System_Project\DomainLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Uzivatel\Desktop\Files\School\DK\sem7\SEP\SEP7_Watering_System\SEP7_Watering_System_Project\DomainLayer\bin\Debug\EntityFramework.xml
+C:\Users\Uzivatel\Desktop\Files\School\DK\sem7\SEP\SEP7_Watering_System\SEP7_Watering_System_Project\DomainLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Uzivatel\Desktop\Files\School\DK\sem7\SEP\SEP7_Watering_System\SEP7_Watering_System_Project\DomainLayer\obj\Debug\DomainLayer.csprojAssemblyReference.cache
+C:\Users\Uzivatel\Desktop\Files\School\DK\sem7\SEP\SEP7_Watering_System\SEP7_Watering_System_Project\DomainLayer\obj\Debug\DomainLayer.csproj.CoreCompileInputs.cache
+C:\Users\Uzivatel\Desktop\Files\School\DK\sem7\SEP\SEP7_Watering_System\SEP7_Watering_System_Project\DomainLayer\obj\Debug\DomainLayer.csproj.CopyComplete
+C:\Users\Uzivatel\Desktop\Files\School\DK\sem7\SEP\SEP7_Watering_System\SEP7_Watering_System_Project\DomainLayer\obj\Debug\DomainLayer.dll
+C:\Users\Uzivatel\Desktop\Files\School\DK\sem7\SEP\SEP7_Watering_System\SEP7_Watering_System_Project\DomainLayer\obj\Debug\DomainLayer.pdb
