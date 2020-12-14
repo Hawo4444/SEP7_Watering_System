@@ -18,7 +18,7 @@ namespace InfrastructureLayer.DataAccess.ArduinoAccess
         {
             port = new SerialPort();
             port.BaudRate = 9600;
-            port.PortName = "COM1";
+            port.PortName = "COM3";
             port.Open();
         }
 

@@ -26,7 +26,6 @@ C:\Users\Uzivatel\Desktop\Files\School\DK\sem7\SEP\SEP7_Watering_System\SEP7_Wat
 C:\Users\Uzivatel\Desktop\Files\School\DK\sem7\SEP\SEP7_Watering_System\SEP7_Watering_System_Project\PresentationLayer\bin\Debug\MaterialSkin.dll
 C:\Users\Uzivatel\Desktop\Files\School\DK\sem7\SEP\SEP7_Watering_System\SEP7_Watering_System_Project\PresentationLayer\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Uzivatel\Desktop\Files\School\DK\sem7\SEP\SEP7_Watering_System\SEP7_Watering_System_Project\PresentationLayer\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Uzivatel\Desktop\Files\School\DK\sem7\SEP\SEP7_Watering_System\SEP7_Watering_System_Project\PresentationLayer\obj\Debug\PresentationLayer.Views.SensorDataListFrom.resources
 C:\Users\Yunes\Desktop\SEP7_Code\SEP7_Watering_System\SEP7_Watering_System_Project\PresentationLayer\obj\Debug\PresentationLayer.csprojAssemblyReference.cache
 C:\Users\Yunes\Desktop\SEP7_Code\SEP7_Watering_System\SEP7_Watering_System_Project\PresentationLayer\obj\Debug\PresentationLayer.MainView.resources
 C:\Users\Yunes\Desktop\SEP7_Code\SEP7_Watering_System\SEP7_Watering_System_Project\PresentationLayer\obj\Debug\PresentationLayer.Properties.Resources.resources
@@ -58,3 +57,6 @@ C:\Users\Yunes\Desktop\SEP7_Code\SEP7_Watering_System\SEP7_Watering_System_Proje
 C:\Users\Yunes\Desktop\SEP7_Code\SEP7_Watering_System\SEP7_Watering_System_Project\PresentationLayer\obj\Debug\PresentationLayer.csproj.CopyComplete
 C:\Users\Yunes\Desktop\SEP7_Code\SEP7_Watering_System\SEP7_Watering_System_Project\PresentationLayer\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Yunes\Desktop\SEP7_Code\SEP7_Watering_System\SEP7_Watering_System_Project\PresentationLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Uzivatel\Desktop\Files\School\DK\sem7\SEP\SEP7_Watering_System\SEP7_Watering_System_Project\PresentationLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Uzivatel\Desktop\Files\School\DK\sem7\SEP\SEP7_Watering_System\SEP7_Watering_System_Project\PresentationLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Uzivatel\Desktop\Files\School\DK\sem7\SEP\SEP7_Watering_System\SEP7_Watering_System_Project\PresentationLayer\obj\Debug\PresentationLayer.Views.SensorDataListForm.resources

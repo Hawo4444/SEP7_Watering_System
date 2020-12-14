@@ -18,7 +18,7 @@ namespace ServiceLayer.Services.SensorDataServices
         private IWateringSchedulerSensors _wateringScheduler;
 
         private static Timer arduinoTimer;
-        private const int arduinoRequestFrequency = 5000; //To be changed
+        private const int arduinoRequestFrequency = 5000; // To be changed
 
         public SensorDataServices(ISensorDataRepository sensorDataRepository, IArduinoAccess arduinoAccess,
             IMainPresenter mainPresenter, IWateringScheduler wateringScheduler)
@@ -27,7 +27,7 @@ namespace ServiceLayer.Services.SensorDataServices
             _arduinoAccess = arduinoAccess;
             _mainPresenter = mainPresenter;
             _wateringScheduler = wateringScheduler;
-            GetAndInsertSensorData(); // Uncomment!!!
+            GetAndInsertSensorData(); 
             SetTimer();
         }
 
@@ -48,6 +48,10 @@ namespace ServiceLayer.Services.SensorDataServices
         {
             GetAndInsertSensorData();
             _wateringScheduler.UpdateSensorDataInScheduler(GetSensorData());
+            for (int i = 0; i < ((List<SensorDataModel>)RetrieveAllData()).Count; i++)
+            {
+                Console.WriteLine(((List<SensorDataModel>)RetrieveAllData())[i].TimeStamp);
+            }
         }
 
         public void GetAndInsertSensorData()

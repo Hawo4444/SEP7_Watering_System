@@ -24,3 +24,7 @@ C:\Users\Yunes\Desktop\SEP7_Code\SEP7_Watering_System\SEP7_Watering_System_Proje
 C:\Users\Yunes\Desktop\SEP7_Code\SEP7_Watering_System\SEP7_Watering_System_Project\ServiceLayer\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Yunes\Desktop\SEP7_Code\SEP7_Watering_System\SEP7_Watering_System_Project\ServiceLayer\bin\Debug\EntityFramework.xml
 C:\Users\Yunes\Desktop\SEP7_Code\SEP7_Watering_System\SEP7_Watering_System_Project\ServiceLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Uzivatel\Desktop\Files\School\DK\sem7\SEP\SEP7_Watering_System\SEP7_Watering_System_Project\ServiceLayer\bin\Debug\EntityFramework.dll
+C:\Users\Uzivatel\Desktop\Files\School\DK\sem7\SEP\SEP7_Watering_System\SEP7_Watering_System_Project\ServiceLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Uzivatel\Desktop\Files\School\DK\sem7\SEP\SEP7_Watering_System\SEP7_Watering_System_Project\ServiceLayer\bin\Debug\EntityFramework.xml
+C:\Users\Uzivatel\Desktop\Files\School\DK\sem7\SEP\SEP7_Watering_System\SEP7_Watering_System_Project\ServiceLayer\bin\Debug\EntityFramework.SqlServer.xml

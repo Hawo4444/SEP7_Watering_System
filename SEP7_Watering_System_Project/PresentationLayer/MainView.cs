@@ -18,7 +18,7 @@ namespace PresentationLayer
 {
     public partial class MainView : MaterialForm, IMainView
     {
-        private delegate void SafeCallDelegate(string text, TextBox textBox);
+        private delegate void SafeCallDelegate(string text, dynamic control);
 
         public MainView()
         {
