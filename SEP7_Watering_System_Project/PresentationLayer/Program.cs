@@ -37,12 +37,10 @@ namespace PresentationLayer
             
             ISensorDataServices sensorDataServices = new SensorDataServices(sensorDataRepository, arduinoAccess, mainPresenter, wateringScheduler);
 
-            //IMainView mainView = mainPresenter.GetMainView();
-
             Application.Run((MainView)mainView);
 
             forecastDataServices.StopTimer();
-            //sensorDataServices.StopTimer();
+            sensorDataServices.StopTimer();
         }
     }
 }

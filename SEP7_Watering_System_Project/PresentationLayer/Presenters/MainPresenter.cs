@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ServiceLayer.Services.ForecastDataServices;
 using DomainLayer.Models.SensorData;
+using PresentationLayer.Utility;
 
 namespace PresentationLayer.Presenters
 {
@@ -18,12 +19,13 @@ namespace PresentationLayer.Presenters
         public MainPresenter(IMainView mainView)
         {
             _mainView = mainView;
+            mainView.ViewEvent += PresenterEventHandler;
         }
 
-        /*public IMainView GetMainView() //and this
+        public void PresenterEventHandler(Object sender, EventClass e)
         {
-            return _mainView;
-        }*/
+            Console.WriteLine(e.EventFired);
+        }
 
         public void UpdateForecastData(IForecastDataModel forecastDataModel)
         {

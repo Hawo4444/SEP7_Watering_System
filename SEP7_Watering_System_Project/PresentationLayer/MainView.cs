@@ -20,6 +20,8 @@ namespace PresentationLayer
     {
         private delegate void SafeCallDelegate(string text, dynamic control);
 
+        public event EventHandler<EventClass> ViewEvent = (s, e) => { };
+
         public MainView()
         {
             InitializeComponent();
@@ -81,7 +83,7 @@ namespace PresentationLayer
 
         private void waterPlantsManually(object sender, EventArgs e)
         {
-
+            ViewEvent(this, new EventClass("ShowAllData"));
         }
     }
 }

@@ -74,6 +74,7 @@
     <Compile Include="Presenters\IBasePresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\EventClass.cs" />
     <Compile Include="Utility\UnixToDateConverter.cs" />
     <Compile Include="Views\ErrorMessageView.cs">
       <SubType>Form</SubType>
