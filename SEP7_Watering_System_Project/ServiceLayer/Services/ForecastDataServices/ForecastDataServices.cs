@@ -1,5 +1,6 @@
 ﻿using DomainLayer.Models.ForecastData;
 using ServiceLayer.Services.SchedulerServices;
+using ServiceLayer.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,17 +13,16 @@ namespace ServiceLayer.Services.ForecastDataServices
     public class ForecastDataServices : IHttpClient, IForecastDataServices, IWateringSchedulerForecast
     {
         private IHttpClient _apiClient;
-        private IMainPresenter _mainPresenter;
-
         private IWateringSchedulerForecast _wateringScheduler;
 
-        private static Timer apiTimer;
-        private const int apiRequestFrequency = 5000; //To be changed
+        public event EventHandler<ForecastUpdateEvent> _forecastUpdateEvent = (s, e) => { };
 
-        public ForecastDataServices(IHttpClient apiClient, IMainPresenter mainPresenter, IWateringScheduler wateringScheduler)
+        private static Timer apiTimer;
+        private const int apiRequestFrequency = 3600; // Update weather data every hour 
+
+        public ForecastDataServices(IHttpClient apiClient, IWateringScheduler wateringScheduler)
         {
             _apiClient = apiClient;
-            _mainPresenter = mainPresenter;
 
             _wateringScheduler = wateringScheduler;
 
@@ -45,8 +45,7 @@ namespace ServiceLayer.Services.ForecastDataServices
 
         private void OnTimedEvent(Object source, ElapsedEventArgs e)
         {
-            //be cautious of this line
-            _mainPresenter.UpdateForecastData(GetAsync<ForecastDataModel>().Result);
+            _forecastUpdateEvent(this, new ForecastUpdateEvent(GetAsync<ForecastDataModel>().Result));
             _wateringScheduler.UpdateForecastDataInScheduler(GetAsync<ForecastDataModel>().Result);
         }
 

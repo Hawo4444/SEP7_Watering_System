@@ -1,6 +1,7 @@
 ﻿using DomainLayer.Models.SensorData;
 using ServiceLayer.Services.ForecastDataServices;
 using ServiceLayer.Services.SchedulerServices;
+using ServiceLayer.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,18 +15,19 @@ namespace ServiceLayer.Services.SensorDataServices
     {
         private ISensorDataRepository _sensorDataRepository;
         private IArduinoAccessSensors _arduinoAccess;
-        private IMainPresenter _mainPresenter;
         private IWateringSchedulerSensors _wateringScheduler;
 
-        private static Timer arduinoTimer;
-        private const int arduinoRequestFrequency = 5000; // To be changed
+        public event EventHandler<SensorsUpdateEvent> _sensorsUpdateEvent = (s, e) => { };
+        public event EventHandler<SensorsListEvent> _sensorsListEvent = (s, e) => { };
 
-        public SensorDataServices(ISensorDataRepository sensorDataRepository, IArduinoAccessSensors arduinoAccess,
-            IMainPresenter mainPresenter, IWateringScheduler wateringScheduler)
+        private static Timer arduinoTimer;
+        private const int arduinoRequestFrequency = 5000; // Frequency of arduino data requests
+
+        public SensorDataServices(ISensorDataRepository sensorDataRepository, 
+            IArduinoAccessSensors arduinoAccess, IWateringScheduler wateringScheduler)
         {
             _sensorDataRepository = sensorDataRepository;
             _arduinoAccess = arduinoAccess;
-            _mainPresenter = mainPresenter;
             _wateringScheduler = wateringScheduler;
             GetAndInsertSensorData(); 
             SetTimer();
@@ -59,7 +61,7 @@ namespace ServiceLayer.Services.SensorDataServices
         public void InsertSensorData(ISensorDataModel sensorDataModel)
         {
             _sensorDataRepository.InsertSensorData(sensorDataModel);
-            _mainPresenter.UpdateCurrentSensorData(sensorDataModel);
+            _sensorsUpdateEvent(this, new SensorsUpdateEvent(sensorDataModel));
         }
 
         public IEnumerable<SensorDataModel> RetrieveAllData()

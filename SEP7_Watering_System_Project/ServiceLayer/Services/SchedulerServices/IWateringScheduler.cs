@@ -3,5 +3,6 @@
     public interface IWateringScheduler : IWateringSchedulerForecast, IWateringSchedulerSensors
     {
         void StopTimer();
+        void Water();
     }
 }

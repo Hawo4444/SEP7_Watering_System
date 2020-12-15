@@ -24,18 +24,20 @@ namespace PresentationLayer
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            IMainView mainView = new MainView();
-            IMainPresenter mainPresenter = new MainPresenter(mainView);
+            IMainView mainView = new MainView();     
 
             IArduinoAccess arduinoAccess = new ArduinoAccess();
             IWateringScheduler wateringScheduler = new WateringScheduler(arduinoAccess);
 
             IHttpClient httpClient = new DefaultHttpClient();
-            ForecastDataServices forecastDataServices = new ForecastDataServices(httpClient, mainPresenter, wateringScheduler);
+            ForecastDataServices forecastDataServices = new ForecastDataServices(httpClient, wateringScheduler);
 
             ISensorDataRepository sensorDataRepository = new SensorDataRepository();
             
-            ISensorDataServices sensorDataServices = new SensorDataServices(sensorDataRepository, arduinoAccess, mainPresenter, wateringScheduler);
+            ISensorDataServices sensorDataServices = new SensorDataServices(sensorDataRepository, arduinoAccess, wateringScheduler);
+
+            IMainPresenter mainPresenter = new MainPresenter(mainView, wateringScheduler, 
+                sensorDataServices, forecastDataServices);
 
             Application.Run((MainView)mainView);
 

@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace PresentationLayer.Utility
 {
-    public class EventClass : EventArgs
+    public class ViewEvent : EventArgs
     {
-        public String EventFired { get; private set; }
-        public EventClass(String eventFired)
+        public String _eventFired { get; private set; }
+
+        public ViewEvent(String eventFired)
         {
-            EventFired = eventFired;
+            _eventFired = eventFired;
         }
     }
 }

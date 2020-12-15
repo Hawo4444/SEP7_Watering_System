@@ -1,4 +1,5 @@
-﻿using MaterialSkin.Controls;
+﻿using DomainLayer.Models.SensorData;
+using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,14 +14,19 @@ namespace PresentationLayer.Views
 {
     public partial class SensorDataListForm : MaterialForm
     {
-        public SensorDataListForm()
+        private IEnumerable<ISensorDataModel> _sensorDataList;
+
+        public SensorDataListForm(IEnumerable<ISensorDataModel> sensorDataList)
         {
             InitializeComponent();
+            _sensorDataList = sensorDataList;
         }
 
         private void SensorDataListFrom_Load(object sender, EventArgs e)
         {
-            
+            // Populate
+            BindingSource source = new BindingSource();
+            source.DataSource = _sensorDataList;
         }
 
         private void SensorDataListFrom_FormClosing(object sender, FormClosingEventArgs e)

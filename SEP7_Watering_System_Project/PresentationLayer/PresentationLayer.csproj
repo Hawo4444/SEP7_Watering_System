@@ -74,7 +74,7 @@
     <Compile Include="Presenters\IBasePresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utility\EventClass.cs" />
+    <Compile Include="Utility\ViewEvent.cs" />
     <Compile Include="Utility\UnixToDateConverter.cs" />
     <Compile Include="Views\ErrorMessageView.cs">
       <SubType>Form</SubType>
@@ -108,6 +108,8 @@
       <DependentUpon>SensorDataListForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\DomainLayer.Models.SensorData.ISensorDataModel.datasource" />
+    <None Include="Properties\DataSources\DomainLayer.Models.SensorData.SensorDataModel.datasource" />
     <None Include="Properties\packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

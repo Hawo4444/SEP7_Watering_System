@@ -65,6 +65,9 @@
     <Compile Include="Services\SensorDataServices\SensorDataServices.cs" />
     <Compile Include="Services\SensorDataServices\ISensorDataServices.cs" />
     <Compile Include="Services\SensorDataServices\ISensorDataRepository.cs" />
+    <Compile Include="Utility\SensorsListEvent.cs" />
+    <Compile Include="Utility\ForecastUpdateEvent.cs" />
+    <Compile Include="Utility\SensorsUpdateEvent.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

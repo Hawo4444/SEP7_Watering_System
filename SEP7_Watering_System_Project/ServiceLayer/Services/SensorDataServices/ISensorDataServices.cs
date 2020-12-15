@@ -1,4 +1,5 @@
 ﻿using DomainLayer.Models.SensorData;
+using ServiceLayer.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,9 @@ namespace ServiceLayer.Services.SensorDataServices
 {
     public interface ISensorDataServices
     {
+        event EventHandler<SensorsUpdateEvent> _sensorsUpdateEvent;
+        event EventHandler<SensorsListEvent> _sensorsListEvent;
         void StopTimer();
+        IEnumerable<SensorDataModel> RetrieveAllData();
     }
 }

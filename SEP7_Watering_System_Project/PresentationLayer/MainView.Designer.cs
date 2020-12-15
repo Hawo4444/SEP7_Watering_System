@@ -222,7 +222,7 @@
             this.buttonWaterNow.TabIndex = 5;
             this.buttonWaterNow.Text = "Water Now";
             this.buttonWaterNow.UseVisualStyleBackColor = true;
-            this.buttonWaterNow.Click += new System.EventHandler(this.waterPlantsManually);
+            this.buttonWaterNow.MouseClick += new System.Windows.Forms.MouseEventHandler(this.waterPlantsManually_MouseClick);
             // 
             // buttonShowSensorData
             // 
@@ -240,6 +240,7 @@
             this.buttonShowSensorData.TabIndex = 6;
             this.buttonShowSensorData.Text = "Show Watering Schedule";
             this.buttonShowSensorData.UseVisualStyleBackColor = true;
+            this.buttonShowSensorData.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ShowWateringSchedule_MouseClick);
             // 
             // materialFlatButton1
             // 

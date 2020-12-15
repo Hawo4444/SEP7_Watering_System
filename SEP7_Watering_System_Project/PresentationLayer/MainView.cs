@@ -20,7 +20,7 @@ namespace PresentationLayer
     {
         private delegate void SafeCallDelegate(string text, dynamic control);
 
-        public event EventHandler<EventClass> ViewEvent = (s, e) => { };
+        public event EventHandler<ViewEvent> _viewEvent = (s, e) => { };
 
         public MainView()
         {
@@ -29,7 +29,6 @@ namespace PresentationLayer
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Green500, Primary.Green700, Primary.Green200, Accent.LightGreen100, TextShade.WHITE);
-            //this.Show();
         }
 
         public void ShowMainView()
@@ -77,13 +76,23 @@ namespace PresentationLayer
 
         private void materialFlatButton1_MouseClick(object sender, MouseEventArgs e)
         {
-            this.Enabled = false;
-            new SensorDataListForm().Show(this);
+            _viewEvent(this, new ViewEvent("GetSensorDataList"));
         }
 
-        private void waterPlantsManually(object sender, EventArgs e)
+        private void waterPlantsManually_MouseClick(object sender, MouseEventArgs e)
         {
-            ViewEvent(this, new EventClass("ShowAllData"));
+            _viewEvent(this, new ViewEvent("Water"));
+        }
+
+        public void OpenHistoricalDataView(IEnumerable<ISensorDataModel> sensorDataList)
+        {
+            this.Enabled = false;
+            new SensorDataListForm(sensorDataList).Show(this);
+        }
+
+        private void ShowWateringSchedule_MouseClick(object sender, MouseEventArgs e)
+        {
+            _viewEvent(this, new ViewEvent("ShowWateringSchedule"));
         }
     }
 }
